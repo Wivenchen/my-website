@@ -9,7 +9,7 @@
   <div class="container">
      <div><h1>歡迎來到我的網頁！</h1></div>
      <div><p>這是一張貓咪圖片：</p></div>
-     <img id="catImage" src="cat.jpg" alt="可愛貓咪" width="300">
+     <img id="catImage" src="../images/cat.jpg" alt="可愛貓咪" width="300">
      <button onclick="changeCat()">點我</button>
    </div> 
   <script>
@@ -18,9 +18,9 @@
     function changeCat() {
       const img = document.getElementById("catImage");
       if (isOriginal) {
-        img.src = "new-cat.jpg";  // 第二張圖
+        img.src = "../images/new-cat.jpg";  // 第二張圖
       } else {
-        img.src = "cat.jpg";      // 原始圖
+        img.src = "../images/cat.jpg";      // 原始圖
       }
       isOriginal = !isOriginal; // 切換狀態
     }
