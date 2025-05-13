@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>我的網頁加圖片</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+     <div><h1>歡迎來到我的網頁！</h1></div>
+     <div><p>這是一張貓咪圖片：</p></div>
+     <img id="catImage" src="../images/cat.jpg" alt="可愛貓咪" width="300">
+     <button onclick="changeCat()">點我</button>
+   </div> 
+  <script>
+    let isOriginal = true;
+
+    function changeCat() {
+      const img = document.getElementById("catImage");
+      if (isOriginal) {
+        img.src = "../images/new-cat.jpg";  // 第二張圖
+      } else {
+        img.src = "../images/cat.jpg";      // 原始圖
+      }
+      isOriginal = !isOriginal; // 切換狀態
+    }
+  </script>
+</body>
+</html>
